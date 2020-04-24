@@ -30,17 +30,6 @@
     return nil;
 }
 
-- (void)setObjects:(NSArray *)value forKey:(NSString*)key {
-    [NSException raise:@"Unimplemented"
-                format:@"setObjects:forKey: must be implemented in subclasses of IASKAbstractSettingsStore"];
-}
-
-- (NSArray *)objectsForKey:(NSString *)key {
-    [NSException raise:@"Unimplemented"
-                format:@"objectsForKey: must be implemented in subclasses of IASKAbstractSettingsStore"];
-	return nil;
-}
-
 - (void)setBool:(BOOL)value forKey:(NSString*)key {
     [self setObject:[NSNumber numberWithBool:value] forKey:key];
 }
@@ -74,10 +63,6 @@
 
 - (BOOL)synchronize {
     return NO;
-}
-
-- (NSInteger)numberOfRowsForKeySpecifier:(NSString *)key {
- 	return 0;
 }
 
 @end
